@@ -1,8 +1,15 @@
 # Copyright 2018 Simone Rubino - Agile Business Group
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests import common
+import requests
+import json
+import base64
+import logging
 
+from odoo.tests import common
+from odoo.tests import tagged
+
+_logger = logging.getLogger(__name__)
 
 class TestDeliveryCost(common.TransactionCase):
     def setUp(self):
